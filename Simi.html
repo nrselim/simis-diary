@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabiha Rahman Simi</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #ffe0ec, #fff);
+}
+
+/* LOGIN SCREEN */
+#login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff69b4;
+    color: white;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: #ff69b4;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* MAIN SITE */
+#main {
+    display: none;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #ff69b4;
+    color: white;
+    animation: fadeIn 2s;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: slideUp 1s;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff69b4;
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+<h2>🔐 Private Memory</h2>
+<p>Enter Password to View</p>
+<input type="password" id="pass" placeholder="Password">
+<button onclick="check()">Enter</button>
+<p id="error"></p>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="main">
+
+<header>
+<h1>Nabiha Rahman Simi 👶💖</h1>
+<p>Born on 21 March 2026</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>👶 Birth Memory</h2>
+<p>Today you came into our life and filled our hearts with love...</p>
+</div>
+
+<div class="card">
+<h2>📸 First Photo</h2>
+<img src="baby1.jpg" alt="Simi Photo">
+</div>
+
+<div class="card">
+<h2>🎂 First Birthday</h2>
+<p>Waiting to celebrate your first birthday 🎉</p>
+</div>
+
+<div class="card">
+<h2>💌 Message from Baba</h2>
+<p>Dear Simi, when you read this in future, remember Baba loves you forever ❤️</p>
+</div>
+
+</div>
+
+<footer>
+<p>Made with ❤️ by Baba</p>
+</footer>
+
+</div>
+
+<script>
+function check() {
+    var p = document.getElementById("pass").value;
+    if(p === "simi2026") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("main").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "Wrong Password!";
+    }
+}
+</script>
+
+</body>
+</html>
